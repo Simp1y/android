@@ -1,0 +1,22 @@
+name: android
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch: {}
+  workflow_call: 
+
+env:
+  GIT_CLONE_PATH: ${{ github.run_id }}
+  
+jobs:
+# ***** Prepare ***** #
+  prepare:
+    runs-on: android
+    steps:
+      - name: Checkout code 👀 👀 👀 
+        uses: actions/checkout@v3
+        with:
+          path: ${{ env.GIT_CLONE_PATH }}
+      - name: echo
+        run: echo "android repository"
