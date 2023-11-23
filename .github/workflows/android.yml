@@ -26,9 +26,9 @@ jobs:
       - name: Build Android staging app for testing 
         run: echo "build Android staging app"   
 # ***** Test app ***** #
-  test_ios_app:
+  test_android_app:
     runs-on: android
     needs: build
     steps:
       - name: Test Android staging app for testing 
-        run: echo "build iOS staging app"
+        run: echo "test Android app"
