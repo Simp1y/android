@@ -21,12 +21,14 @@ jobs:
 # ***** Build ***** #
   build:
     runs-on: android
+    needs: prepare
     steps:
-      - name: build iOS staging app for testing 
-        run: echo "build iOS staging app"   
+      - name: Build Android staging app for testing 
+        run: echo "build Android staging app"   
 # ***** Test app ***** #
   test_ios_app:
     runs-on: android
+    needs: build
     steps:
-      - name: build iOS staging app for testing 
+      - name: Test Android staging app for testing 
         run: echo "build iOS staging app"
