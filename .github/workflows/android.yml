@@ -1,4 +1,4 @@
-name: android
+name: ios
 on:
   pull_request:
     branches:
@@ -18,5 +18,15 @@ jobs:
         uses: actions/checkout@v3
         with:
           path: ${{ env.GIT_CLONE_PATH }}
-      - name: echo
-        run: echo "android repository"
+# ***** Build ***** #
+  build:
+    runs-on: android
+    steps:
+      - name: build iOS staging app for testing 
+        run: echo "build iOS staging app"   
+# ***** Test app ***** #
+  test_ios_app:
+    runs-on: android
+    steps:
+      - name: build iOS staging app for testing 
+        run: echo "build iOS staging app"
