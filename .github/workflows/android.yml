@@ -21,6 +21,7 @@ jobs:
       - name: Bundle update
         working-directory: ${{ env.GIT_CLONE_PATH }}
         run: |
+          which tcctl
           bundle update
 # ***** Build ***** #
   build:
