@@ -13,7 +13,6 @@ jobs:
 # ***** Test app ***** #
   test_android_app:
     runs-on: android
-    needs: build
     steps:
       - name: Test Android staging app for testing 
         run: echo "test Android app"
